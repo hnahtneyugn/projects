@@ -42,11 +42,6 @@ int findParent(int i) {
     return parent[i];
 }
 
-// check if x and y are connected
-bool isConnected(int x, int y) {
-    return (findParent(x) == findParent(y));
-}
-
 // only unite if x and y are not connected yet
 void unite(int x, int y) {
     // find root of x and y
