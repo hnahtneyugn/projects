@@ -54,14 +54,14 @@ int main() {
     vector<int> distance(vertices, INT_MAX);
     distance[source] = 0;
 
-    if (BellmanFord(edgeList, distance, vertices)) {
+    if (BellmanFord(edgeList, distance, vertices)) 
         cout << "Graph contains a negative cycle!\n";
-        cout << "Distance from source vertex " << source << ":" << endl;
-        for (int i = 0; i < vertices; ++i) {
-            cout << "Vertex " << i << " -> " << distance[i] << endl;
-        }
-    } else {
+    else 
         cout << "Graph doesn't contain a negative cycle!\n";
+
+    cout << "Distance from source vertex " << source << ":" << endl;
+    for (int i = 0; i < vertices; ++i) {
+        cout << "Vertex " << i << " -> " << distance[i] << endl;
     }
 
     return 0; 
